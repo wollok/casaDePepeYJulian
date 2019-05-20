@@ -1,4 +1,7 @@
 # Casa de Pepe y Julián
+ 
+[![Build Status](https://travis-ci.org/wollok/casaDePepeYJulian.svg?branch=master)](https://travis-ci.org/wollok/casaDePepeYJulian)
+
 Pepe y Julián viven juntos, y les gusta comprar cosas. 
 De cada cosa nos interesa el precio, si es comida o no, y si es un electrodoméstico o no.
 
