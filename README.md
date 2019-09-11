@@ -29,10 +29,10 @@ Agregar las siguientes cosas que pueden comprarse:
 - un microondas: 4200 pesos.
 - un kilo de cebollas: 25 pesos.
 - una compu: 500 dólares. Para saber el precio en pesos, multiplicar por la cotización del dólar. Agregar un objeto `dolar` al que se le pueda preguntar el `precioDeVenta()`, alcanza con que devuelva un valor fijo. 
-<!-- Agregar también un `precioDeCompra()` que se va a usar más adelante. Se supone que el precio de compra es un poco menor al de venta, p.ej. si el de venta es 35, el de compra es 34. -->
 - un "pack comida" que incluye un plato (que puede ser tira de asado, fideos o milanesas) y un aderezo (que puede ser la botella de salsa de tomates o el kilo de cebollas. Precio: la suma del precio de sus componentes.
 
-Pregunta: para lograr que la casa pueda comprar estas cosas nuevas, ¿qué hubo que cambiar en la definición del objeto que representa la casa? Si hay que tocar poco, o nada, ¿qué concepto nos ayuda?
+**Pregunta**  
+para lograr que la casa pueda comprar estas cosas nuevas, ¿qué hubo que cambiar en la definición del objeto que representa la casa? Si hay que tocar poco, o nada, ¿qué concepto nos ayuda?
 
 
 ## Cuenta bancaria
@@ -51,18 +51,6 @@ P.ej. supongamos que configuramos la cuenta combinada así: la primaria es la cu
 
 Agregar en la casa los métodos `gastar(importe)`, que hace la extracción de la cuenta que esté usando, y `dineroDisponible()`, que es el saldo de la cuenta. 
 Modificar el método `comprar(cosa)` para que además de lo que esté haciendo, registre el gasto por el precio de la cosa que se está comprando. P.ej. comprar la tira de asado implica gastar 350 pesos.
-
-<br>
-
-## Test complejo
-
-
-<!-- 
-1. una *cuenta en dólares*, mantiene su saldo en dólares. Cuando se deposita el importe se indica en pesos, el saldo debe aumentar en `importe / dolar.precioDeVenta()`. P.ej. si el precio de venta del dólar es 35 pesos y deposito 700 pesos, al saldo se suman 20 dólares. Cuando extraigo, se resta según el precio de compra, o sea el saldo disminuye en `importe / dolar.precioDeCompra()`. P.ej. si el precio de compra es 34 pesos y retiro 1020, el saldo disminuye en 30 dólares. Para devolver el `saldo()` se usa el precio de compra, p.ej. si el saldo en dólares es 100, entonces si a la cuenta le pido `saldo()` me tiene que devolver 
--->
-
-
-
 
 
 
