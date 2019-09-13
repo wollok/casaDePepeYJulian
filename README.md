@@ -29,7 +29,7 @@ Agregar las siguientes cosas que pueden comprarse:
 - un microondas: 4200 pesos.
 - un kilo de cebollas: 25 pesos.
 - una compu: 500 dólares. Para saber el precio en pesos, multiplicar por la cotización del dólar. Agregar un objeto `dolar` al que se le pueda preguntar la `cotizacion()`. 
-- un "pack comida" que incluye un plato (que puede ser tira de asado, fideos o milanesas) y un aderezo (que puede ser la botella de salsa de tomates o el kilo de cebollas. Precio: la suma del precio de sus componentes.
+- un "pack comida" que incluye un plato (que puede ser tira de asado, fideos o milanesas) y un aderezo (que puede ser la botella de salsa de tomates o el kilo de cebollas). Precio: la suma del precio de sus componentes.
 - un "pack regalo" que incluye una cantidad arbitraria de componentes. Se considera comida si todos sus componentes son comida, se considera electrodoméstico si al menos uno de los componentes es electrodoméstico. El precio es la suma del precio de todos sus componentes, con un descuento del 20%. 
 
 **Pregunta**  
@@ -60,6 +60,32 @@ P.ej. supongamos que configuramos la cuenta combinada así: la primaria es la cu
 
 Agregar en la casa los métodos `gastar(importe)`, que hace la extracción de la cuenta que esté usando, y `dineroDisponible()`, que es el saldo de la cuenta. 
 Modificar el método `comprar(cosa)` para que además de lo que esté haciendo, registre el gasto por el precio de la cosa que se está comprando. P.ej. comprar la tira de asado implica gastar 350 pesos.
+
+
+
+# Items desafío
+
+**Atención**  
+Estos ítems se escapan al contenido mínimo de la materia. Son desafíos para alumnes inquietes. Encaralos solamente si:
+- resolviste _todo_ el ejercicio hasta acá.
+- entendés que tal vez salgan y tal vez no, tranca.
+
+Con estas prevenciones, acá van. Son todos mensajes que debe entender la casa.
+- `precioPromedioComida()`: el precio promedio de las compras _de comida_ que hizo la casa. P.ej. si la casa compró la cama, la tira de asado y el paquete de fideos, entonces el resultado esperado es 200, que es el promedio entre asado y fideos. 
+- `repitioCompra()`: indica si la casa si compró dos (o más) veces una misma cosa, dado que nada impide hacer p.ej. 
+  ```
+  >>> casa.comprar(cama)
+  >>> casa.comprar(cama)
+  ```
+  con lo cual está comprando la cama dos veces.  
+  _Pista_: a una lista le podés preguntar `occurrencesOf(elemento)`.
+- `tiene(cosa)`: si la compró, o compró un pack que la contiene. P.ej. si el pack comida se configuró con tira de asado y cebollas, entonces al preguntar `tiene(kiloDeCebollas)` debe responder `true`.  
+  _Pista_: hay que agregar comportamiento a las cosas.
+- `aumentoCreciente()`: si cada cosa que compró es más cara que la anterior, teniendo en cuenta el orden en que se fueron comprando.  
+  **¡¡Atenti!!** este es difícil posta.
+- `comidaSalteada()`: si la casa compró, alternativamente, cosas que son comida y cosas que no lo son.  
+  P.ej., si la casa compró asado, cama, fideos y microondas, en ese orden, entonces `comidaSalteada()` debe responder `true`. Lo mismo si el orden es cama / fideos / microondas / asado. Pero si es cama / microondas / fideos / heladera / asado, entonces no, porque hay dos cosas consecutivas que no son comida.  
+  **¡¡Atenti!!** este es, creo, un poco _más_ difícil que el anterior.
 
 
 
