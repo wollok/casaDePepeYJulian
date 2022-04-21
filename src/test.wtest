@@ -1,0 +1,17 @@
+import casa.*
+import cosas.*
+
+test "test comprar" {
+
+	cuentaCorriente.depositar(1000)
+	casaDePepeYJulian.comprar(tiraDeAsado)
+	
+	assert.equals(650, cuentaCorriente.saldo())
+	assert.equals([tiraDeAsado], casaDePepeYJulian.cosas())
+
+	casaDePepeYJulian.comprar(paqueteDeFideos)
+
+	assert.equals(600, cuentaCorriente.saldo())
+	assert.equals([tiraDeAsado, paqueteDeFideos], casaDePepeYJulian.cosas())
+
+}
