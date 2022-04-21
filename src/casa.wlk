@@ -5,8 +5,8 @@ object casaDePepeYJulian {
 	const cuenta = cuentaCorriente
 	
 	method comprar(cosa) {
-		cosas.add(cosa)
 		self.gastar(cosa.precio())
+		cosas.add(cosa)
 	}
 	
 	method gastar(dinero) {
