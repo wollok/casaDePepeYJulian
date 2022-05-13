@@ -8,7 +8,7 @@ object casaDePepeYJulian {
 		self.gastar(cosa.precio())
 		cosas.add(cosa)
 	}
-	
+		
 	method gastar(dinero) {
 		cuenta.extraer(dinero)
 	}
@@ -23,7 +23,18 @@ object cuentaCorriente {
 	}
 	
 	method extraer(dinero) {
+		self.validarExtraccion(dinero) 
 		saldo -= dinero
+	}
+	
+	method puedeExtraer(dinero) {
+		return dinero <= saldo
+	}
+	
+	method validarExtraccion(dinero) {
+		if (not self.puedeExtraer(dinero)) {
+			self.error("no se puede extraer " + dinero +  " saldo: " + saldo)
+		}
 	}
 	
 }

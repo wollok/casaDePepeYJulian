@@ -14,6 +14,10 @@ test "test comprar" {
 	assert.equals(600, cuentaCorriente.saldo())
 	assert.equals([tiraDeAsado, paqueteDeFideos], casaDePepeYJulian.cosas())
 
+	assert.throwsException({casaDePepeYJulian.comprar(heladera)})
 
+	assert.equals(600, cuentaCorriente.saldo())
+	assert.equals([tiraDeAsado, paqueteDeFideos], casaDePepeYJulian.cosas())
+		
 
 }
